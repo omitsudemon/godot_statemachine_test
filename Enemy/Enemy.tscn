@@ -1,0 +1,213 @@
+[gd_scene load_steps=30 format=3 uid="uid://c5vx86qeotlnc"]
+
+[ext_resource type="Script" path="res://Enemy/Enemy.gd" id="1_yldcg"]
+[ext_resource type="Texture2D" uid="uid://q03gdxqjudlv" path="res://Character/Enemy/Massacre Sprite Sheet.png" id="2_ksdqc"]
+[ext_resource type="Script" path="res://Enemy/EnemyStateMachine/EnemyStateMachine.gd" id="2_sbg12"]
+[ext_resource type="Script" path="res://Enemy/EnemyStateMachine/EnemyIdle.gd" id="4_tq60u"]
+[ext_resource type="Script" path="res://Enemy/EnemyStateMachine/EnemyHurt.gd" id="5_x2oeu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rbld6"]
+atlas = ExtResource("2_ksdqc")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_roilv"]
+atlas = ExtResource("2_ksdqc")
+region = Rect2(64, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nbdtf"]
+atlas = ExtResource("2_ksdqc")
+region = Rect2(128, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8lo1n"]
+atlas = ExtResource("2_ksdqc")
+region = Rect2(192, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_idyru"]
+atlas = ExtResource("2_ksdqc")
+region = Rect2(256, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_efxk7"]
+atlas = ExtResource("2_ksdqc")
+region = Rect2(0, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hbt1h"]
+atlas = ExtResource("2_ksdqc")
+region = Rect2(64, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7buld"]
+atlas = ExtResource("2_ksdqc")
+region = Rect2(128, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wrgad"]
+atlas = ExtResource("2_ksdqc")
+region = Rect2(192, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_js5ii"]
+atlas = ExtResource("2_ksdqc")
+region = Rect2(256, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tmu3e"]
+atlas = ExtResource("2_ksdqc")
+region = Rect2(320, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4jco6"]
+atlas = ExtResource("2_ksdqc")
+region = Rect2(384, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tteig"]
+atlas = ExtResource("2_ksdqc")
+region = Rect2(0, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rqith"]
+atlas = ExtResource("2_ksdqc")
+region = Rect2(64, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nnbqs"]
+atlas = ExtResource("2_ksdqc")
+region = Rect2(128, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0ykhq"]
+atlas = ExtResource("2_ksdqc")
+region = Rect2(192, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q26qx"]
+atlas = ExtResource("2_ksdqc")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ba8g"]
+atlas = ExtResource("2_ksdqc")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7hu1t"]
+atlas = ExtResource("2_ksdqc")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tgsf2"]
+atlas = ExtResource("2_ksdqc")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fufc0"]
+atlas = ExtResource("2_ksdqc")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sehna"]
+atlas = ExtResource("2_ksdqc")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0nq4u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rbld6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_roilv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nbdtf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8lo1n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_idyru")
+}],
+"loop": true,
+"name": &"Attack",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_efxk7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hbt1h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7buld")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wrgad")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_js5ii")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tmu3e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4jco6")
+}],
+"loop": true,
+"name": &"Death",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tteig")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rqith")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nnbqs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0ykhq")
+}],
+"loop": false,
+"name": &"Hurt",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q26qx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ba8g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7hu1t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tgsf2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fufc0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sehna")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g2ag6"]
+size = Vector2(51, 26)
+
+[node name="Enemy" type="CharacterBody2D"]
+script = ExtResource("1_yldcg")
+
+[node name="EnemyAnimations" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_0nq4u")
+animation = &"Hurt"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["enemy"]]
+visibility_layer = 3
+position = Vector2(0.5, 19)
+shape = SubResource("RectangleShape2D_g2ag6")
+
+[node name="EnemyStateMachine" type="Node" parent="."]
+script = ExtResource("2_sbg12")
+starting_state = NodePath("EnemyIdle")
+
+[node name="EnemyIdle" type="Node" parent="EnemyStateMachine"]
+script = ExtResource("4_tq60u")
+hurt_node = NodePath("../EnemyHurt")
+animation_name = "Idle"
+
+[node name="EnemyHurt" type="Node" parent="EnemyStateMachine"]
+script = ExtResource("5_x2oeu")
+idle_node = NodePath("../EnemyIdle")
+animation_name = "Hurt"
